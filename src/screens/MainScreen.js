@@ -16,28 +16,11 @@ const MainScreen = ({ navigation }) => {
     const backgroundImage = backgroundMap[selectedBackgroundId] || require('../assets/img/gamebg1.png');
 
     return (
-        <LinearGradient
-            colors={['#3000BB', '#FE2DFF']}
+        <View
             style={{ flex: 1, alignItems: 'center', justifyContent: 'space-around' }}
-        >
-            <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center'}}>
-                <Image source={require('../assets/img/g21.png')} style={{ width: '100%', position: 'absolute', marginTop: 100 }} />
-                <Image source={require('../assets/img/ball6.png')} style={{ width: 150, height: 150, marginTop: 200 }} />
-            </View>
+        >   
 
-            <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{ color: '#fff', fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20 }}>
-                🌟 Welcome to Neon Plink Ball: Lightfall
-            </Text>
-
-            <Text style={{ color: '#fff', fontSize: 16, textAlign: 'left', marginBottom: 40 }}>
-                Enter the stream of light and memory 🌌{'\n'}
-                {'\n'}
-                Your mission is simple: 🎯{'\n'}
-                🔁 Catch the right orbs{'\n'}
-                🧠 Follow the sequence{'\n'}
-                🎵 Master the rhythm
-            </Text>
+            <Image source={require('../AppManager/loader3.png')} style={{flex: 1, width: '100%', height: '100%', position: 'absolute'}}/>
 
             <TouchableOpacity
                 onPress={() => {
@@ -48,6 +31,8 @@ const MainScreen = ({ navigation }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     width: '90%',
+                    position: 'absolute',
+                    bottom: 50,
                     borderColor: '#fff',
                     borderWidth: 3,
                     borderTopLeftRadius: 20,
@@ -58,8 +43,7 @@ const MainScreen = ({ navigation }) => {
                     Start
                 </Text>
             </TouchableOpacity>
-            </View>
-        </LinearGradient>
+        </View>
     );
 };
 
